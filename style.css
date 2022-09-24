@@ -52,3 +52,10 @@ h1 {
     opacity: 100;
     transform: translateX(0);
 }
+
+@media(max-width: 600px) {
+    .box {
+        height: 200px;
+        margin: 40px 0;
+    }
+}
