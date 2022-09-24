@@ -7,9 +7,13 @@ checkBoxes();
 function checkBoxes() {
     const triggerBottom = window.innerHeight / 5 * 4;
 
-    boxes.forEach(box => {
-        const boxTop = box.getBoundingClientRect().top;
-        
+    boxes.forEach((box, i) => {
+        let boxTop = box.getBoundingClientRect().top;
+
+        if (boxes.length - 1 == i) {
+            boxTop -= 200;
+        }
+
         if (boxTop < triggerBottom) {
             box.classList.add('show');
         } else {
